@@ -1,0 +1,19 @@
+{
+  "name": "notebooklm-zip-helper",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Upload the contents of a ZIP file into NotebookLM as sources",
+  "scripts": {
+    "build": "node build.mjs",
+    "watch": "node build.mjs --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.270",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.6.0"
+  },
+  "dependencies": {
+    "jszip": "^3.10.1"
+  }
+}

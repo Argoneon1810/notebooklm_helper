@@ -1,0 +1,17 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+*.zip
+
+# editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# logs
+npm-debug.log*
+*.log

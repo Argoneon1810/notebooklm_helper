@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "Gemini Notebook ZIP Helper",
+  "version": "0.3.0",
+  "description": "ZIP 파일을 풀어서 내용물을 Gemini Notebook(구 NotebookLM) 소스로 업로드합니다.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "Gemini Notebook ZIP Helper — notebook.google.com 우하단 📦 버튼 사용"
+  },
+  "host_permissions": [
+    "https://notebook.google.com/*",
+    "https://notebooklm.google.com/*",
+    "https://gemini.google.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://notebook.google.com/*",
+        "https://notebooklm.google.com/*",
+        "https://gemini.google.com/*"
+      ],
+      "js": [
+        "main.js"
+      ],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": [
+        "https://notebook.google.com/*",
+        "https://notebooklm.google.com/*",
+        "https://gemini.google.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
